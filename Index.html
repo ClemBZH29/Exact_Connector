@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Code Exact Online</h2>
+    <input type="text" id="code" placeholder="Collez votre code ici">
+    <button onclick="envoyerCode()">Envoyer</button>
+    
+    <script>
+    function envoyerCode() {
+        const code = document.getElementById('code').value;
+        fetch('URL_DE_VOTRE_FLUX_ETAPE_1', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({code: code})
+        }).then(() => alert('Code envoyé!'));
+    }
+    </script>
+</body>
+</html>
