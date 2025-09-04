@@ -2,13 +2,13 @@
 <html>
 <body>
     <h2>Code Exact Online</h2>
-    <input type="text" id="code" placeholder="https://default35b1cbcd1fad4a24a797af44df3982.e3.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/cda3a683bad442d489b806f3b8088c4f/triggers/manual/paths/invoke/?api-version=1">
+    <input type="text" id="code" placeholder="Votre code">
     <button onclick="envoyerCode()">Envoyer</button>
     
     <script>
     function envoyerCode() {
         const code = document.getElementById('code').value;
-        fetch('URL_DE_VOTRE_FLUX_ETAPE_1', {
+        fetch('https://default35b1cbcd1fad4a24a797af44df3982.e3.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/cda3a683bad442d489b806f3b8088c4f/triggers/manual/paths/invoke/?api-version=1', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({code: code})
@@ -18,3 +18,4 @@
 </body>
 
 </html>
+
