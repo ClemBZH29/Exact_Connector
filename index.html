@@ -9,14 +9,13 @@
     function envoyerCode() {
         const code = document.getElementById('code').value;
         fetch('https://default35b1cbcd1fad4a24a797af44df3982.e3.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/fc0f04fd357844d48e88286777bf75eb/triggers/manual/paths/invoke/?api-version=1', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({code: code})
+            method: 'GET'
         }).then(() => alert('Code envoyé!'));
     }
     </script>
 </body>
 
 </html>
+
 
 
